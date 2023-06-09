@@ -1,66 +1,78 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# VeTrack
+---
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+vechile tracker application by Ryan Noval Pratama.
 
-## About Laravel
+  --- 
+  
+### App Detail
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Frameworks :
+- Laravel v10
+- Bootstrap 5
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Libraries :
+- Flatpickr.js
+- Select2
+- Font Awesome v5.15.4
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Environment :
+- Fedora Workstation 38
+- MySQL v8.0.33 
+- Php v8.1.19
+- Composer v2.5.7
+- Node v18.16.0
 
-## Learning Laravel
+### Demo
+- admin 
+	- email : admin@dummy.com
+	- pass  : 123456789
+- supervisor
+	- email : supervisor@dummy.com
+	- pass  : 123456789
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## How to use
+Note : This app uses migrations, seeder, and factories
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
+##### Creating Request 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Only admins can add or delete vechile request, however the supervisors can approve or decline those requests, please follow the following instructions for more clarity :
 
-## Laravel Sponsors
+1. Please login as admin to create new request.
+2. Navigate to sidebar and click on add button under the requests menu.
+3. Fill all the required fields.
+4. Click add on the bottom right corner.
+5. The request have been made, now their current status are waiting
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+##### 1st Approval
+To Approve or decline the request please do the following process :
+1. Login as supervisor
+2. Navigate to sidebar and click on list button, under the request menu.
+3. You will see a table of request, and their status, you can filter them to show only certain requests.
+4. On the right side of the table you will see three vertical dots, click on it.
+5. it should show another pop up, select edit to continue the process
+6. now on the bottom right corner you will see decline and confirm buttons, select accordingly to approve or decline request.
+7. if you click confirm the status of the request will change to status 2 (in progress) meaning that the vechile is now on the hand of the driver
 
-### Premium Partners
+##### Report
+After driver finished using the car, admin should update the status of the request as a report
+1. Login as admin
+2. Navigate to sidebar and click on list button, under the request menu.
+3. Click on the vertical dot button
+4. Select edit
+5. Fill all the required informations
+6. Now you can click done on the bottom right corner, meaning that the vechile is back.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+##### 2nd Approval
+Second approval is used to mark that the request is done and both admin and superviser have known about this. 
+1. Login as superviser
+2. Navigate to sidebar and click on list button, under the request menu.
+3. Click on the vertical dot button
+4. Select edit
+5. Now you can click Finish on the bottom right corner, meaning that the vechile is back.
 
-## Contributing
+##### Vechile usage history
+On the top right corner of request table you will see an export button, click this button to download all the request that have been done, also with its properties to excel csv format.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
