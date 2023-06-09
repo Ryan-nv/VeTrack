@@ -1,0 +1,23 @@
+
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav-icon {
+    width: 38px !important;
+    height: 38px !important;
+}
+
+.collapse a .nav-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.collapsing a .nav-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.table-container {
+    overflow-x: scroll;
+}
