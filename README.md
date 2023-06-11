@@ -23,7 +23,7 @@ Environment :
 - Composer v2.5.7
 - Node v18.16.0
 
-### Demo
+### Users
 - admin 
 	- email : admin@dummy.com
 	- pass  : 123456789
